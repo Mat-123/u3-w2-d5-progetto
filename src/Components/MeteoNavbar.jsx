@@ -9,7 +9,7 @@ function MeteoNavbar() {
 
   return (
     <Navbar expand="lg" bg="primary" variant="dark" className="p-0">
-      <Navbar.Brand href="/" className="p-0 ms-2 d-flex align-items-center">
+      <Navbar.Brand href="/" className="p-0 ms-2 my-1 d-flex align-items-center">
         <img src={logo} alt="logo" height="70" className="align-top me-2" />
         <span className="navbar-brand-text">Meteo Station</span>
       </Navbar.Brand>
