@@ -9,7 +9,7 @@ function MeteoNavbar() {
 
   return (
     <Navbar expand="lg" bg="primary" variant="dark" className="p-0">
-      <Navbar.Brand href="#home" className="p-0 ms-2 d-flex align-items-center">
+      <Navbar.Brand href="/" className="p-0 ms-2 d-flex align-items-center">
         <img src={logo} alt="logo" height="70" className="align-top me-2" />
         <span className="navbar-brand-text">Meteo Station</span>
       </Navbar.Brand>
@@ -47,9 +47,9 @@ function MeteoNavbar() {
               Oceania
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link as={Link} to="/contatti">
+          <Link to="/contatti" className={location.pathname === "/contatti" ? "nav-link active" : "nav-link"}>
             Contatti
-          </Nav.Link>
+          </Link>
         </Nav>
         <Nav className="align-items-center">
           <BsSearch className="icons me-2" />

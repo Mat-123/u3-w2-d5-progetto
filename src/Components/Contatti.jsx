@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Contatti = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     name: "",
     email: "",
     message: "",
   });
-  const [showAlert, setShowAlert] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,13 +18,12 @@ const Contatti = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData);
     setFormData({
       name: "",
       email: "",
       message: "",
     });
-    setShowAlert(true);
-    setTimeout(() => setShowAlert(false), 3000);
   };
 
   return (
@@ -72,11 +70,6 @@ const Contatti = () => {
               Invia
             </Button>
           </Form>
-          {showAlert && (
-            <Alert className="mt-3" variant="success" onClose={() => setShowAlert(false)} dismissible>
-              Messaggio inviato correttamente!
-            </Alert>
-          )}
         </Col>
       </Row>
     </Container>
