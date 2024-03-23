@@ -11,7 +11,7 @@ const AlertBar = function () {
         <Alert.Heading>Benvenuto!</Alert.Heading>
         <p>
           Per sbloccare tutte le funzionalita' del servizio Meteo Station si invita ad acquistare il servizio Premium!
-          <Alert.Link href="#"> Clicca qui per maggiori info!</Alert.Link>.
+          <Alert.Link href="/buymeacoffee"> Clicca qui per maggiori info!</Alert.Link>.
         </p>
         <hr />
         <div className="d-flex justify-content-end">

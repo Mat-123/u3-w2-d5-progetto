@@ -15,9 +15,9 @@ const HomeCard = function () {
             </Col>
           </Row>
           <Row>
-            <CityCardLight searchTerm="Rome" />
-            <CityCardLight searchTerm="Milan" />
-            <CityCardLight searchTerm="Naples" />
+            <CityCardLight searchTerm="Roma" />
+            <CityCardLight searchTerm="Milano" />
+            <CityCardLight searchTerm="Napoli" />
           </Row>
           <Row>
             <Col>

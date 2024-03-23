@@ -15,11 +15,11 @@ const CurrentWeatherTab = ({ weatherData }) => (
         <img src={getWeatherIconUrl(weatherData)} alt="Weather Icon" style={{ width: "150px", height: "150px" }} />
       </Col>
       <Col md={10}>
-        <p>Descrizione: {weatherData?.weather[0]?.description}</p>
-        <p>Temperatura: {weatherData?.main?.temp}&deg;C</p>
-        <p>Temperatura Minima: {weatherData?.main?.temp_min}&deg;C</p>
-        <p>Temperatura Massima: {weatherData?.main?.temp_max}&deg;C</p>
-        <p>Umidità: {weatherData?.main?.humidity}%</p>
+        <p>Descrizione: {weatherData.weather[0].description}</p>
+        <p>Temperatura: {weatherData.main.temp}&deg;C</p>
+        <p>Temperatura Minima: {weatherData.main.temp_min}&deg;C</p>
+        <p>Temperatura Massima: {weatherData.main.temp_max}&deg;C</p>
+        <p>Umidità: {weatherData.main.humidity}%</p>
         <p>Vento: {getWindDescription(weatherData)}</p>
       </Col>
     </Row>
@@ -34,11 +34,11 @@ const TomorrowWeatherTab = ({ weatherData }) => (
         <img src={getWeatherIconUrl(weatherData)} alt="Weather Icon" style={{ width: "150px", height: "150px" }} />
       </Col>
       <Col md={10}>
-        <p>Descrizione: {weatherData?.weather[0]?.description}</p>
-        <p>Temperatura: {weatherData?.main?.temp}&deg;C</p>
-        <p>Temperatura Minima: {weatherData?.main?.temp_min}&deg;C</p>
-        <p>Temperatura Massima: {weatherData?.main?.temp_max}&deg;C</p>
-        <p>Umidità: {weatherData?.main?.humidity}%</p>
+        <p>Descrizione: {weatherData.weather[0].description}</p>
+        <p>Temperatura: {weatherData.main.temp}&deg;C</p>
+        <p>Temperatura Minima: {weatherData.main.temp_min}&deg;C</p>
+        <p>Temperatura Massima: {weatherData.main.temp_max}&deg;C</p>
+        <p>Umidità: {weatherData.main.humidity}%</p>
         <p>Vento: {getWindDescription(weatherData)}</p>
       </Col>
     </Row>
@@ -53,11 +53,11 @@ const DayAfterTomorrowWeatherTab = ({ weatherData }) => (
         <img src={getWeatherIconUrl(weatherData)} alt="Weather Icon" style={{ width: "150px", height: "150px" }} />
       </Col>
       <Col md={10}>
-        <p>Descrizione: {weatherData?.weather[0]?.description}</p>
-        <p>Temperatura: {weatherData?.main?.temp}&deg;C</p>
-        <p>Temperatura Minima: {weatherData?.main?.temp_min}&deg;C</p>
-        <p>Temperatura Massima: {weatherData?.main?.temp_max}&deg;C</p>
-        <p>Umidità: {weatherData?.main?.humidity}%</p>
+        <p>Descrizione: {weatherData.weather[0].description}</p>
+        <p>Temperatura: {weatherData.main.temp}&deg;C</p>
+        <p>Temperatura Minima: {weatherData.main.temp_min}&deg;C</p>
+        <p>Temperatura Massima: {weatherData.main.temp_max}&deg;C</p>
+        <p>Umidità: {weatherData.main.humidity}%</p>
         <p>Vento: {getWindDescription(weatherData)}</p>
       </Col>
     </Row>

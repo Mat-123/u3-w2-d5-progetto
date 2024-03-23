@@ -15,7 +15,7 @@ class CityCardLight extends Component {
   fetchLocalWeather = () => {
     const { searchTerm } = this.props;
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm},IT&appid=da7216bb20cb0d37c988f17028f82c8b&lang=it`
+      `https://api.openweathermap.org/data/2.5/weather?q=${searchTerm},IT&appid=da7216bb20cb0d37c988f17028f82c8b&lang=it&units=metric`
     )
       .then((response) => {
         if (response.ok) {
@@ -82,13 +82,11 @@ class CityCardLight extends Component {
                   )}
                   <div>
                     <Card.Title>{searchTerm}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted">
-                      {localWeather.sys && localWeather.sys.country}
-                    </Card.Subtitle>
+                    <Card.Subtitle className="mb-2 text-muted">{localWeather.sys.country}</Card.Subtitle>
                     <Card.Text>
-                      Temperature: {(localWeather.main.temp - 273.15).toFixed(2)}°C
+                      Temperatura: {localWeather.main.temp}°C
                       <br />
-                      Humidity: {localWeather.main.humidity}%
+                      Umidità: {localWeather.main.humidity}%
                     </Card.Text>
                   </div>
                 </div>
