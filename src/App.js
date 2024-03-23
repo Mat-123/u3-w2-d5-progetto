@@ -9,6 +9,8 @@ import HomeCard from "./Components/HomeCard";
 import LocalWeatherDetail from "./Components/LocalWeatherDetail";
 import ZoneForecast from "./Components/ZoneForecast";
 import Contatti from "./Components/Contatti";
+import Footer from "./Components/Footer";
+import BuyMeACoffee from "./Components/BuyMeACoffee";
 
 function App() {
   return (
@@ -20,8 +22,10 @@ function App() {
         <Route path="/weather/:city" element={<LocalWeatherDetail />} />
         <Route path="/previsioni/:zone" element={<ZoneForecast />} />
         <Route path="/contatti" element={<Contatti />} />
+        <Route path="/buymeacoffee" element={<BuyMeACoffee />} />
       </Routes>
       <CookieConsent>This website uses cookies to enhance the user experience.</CookieConsent>
+      <Footer />
     </BrowserRouter>
   );
 }

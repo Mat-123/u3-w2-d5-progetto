@@ -21,7 +21,7 @@ class CityCardLight extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("Riscontrato problema nella chiamata API.");
+          throw new Error("Errore durante il recupero dei dati meteo.");
         }
       })
       .then((weatherFromCity) => {
@@ -31,7 +31,7 @@ class CityCardLight extends Component {
         });
       })
       .catch((error) => {
-        console.log("ERRORE", error);
+        console.log("Errore durante il recupero dei dati meteo:", error);
         this.setState({
           isLoading: false,
           isError: true,
@@ -58,12 +58,13 @@ class CityCardLight extends Component {
         {isLoading && (
           <Row className="justify-content-center mt-3">
             <Spinner animation="border" variant="danger" />
+            <p>Caricamento...</p>
           </Row>
         )}
 
         {isError && (
           <Row className="justify-content-center mt-3">
-            <Alert variant="danger">Qualcosa è andato storto.</Alert>
+            <Alert variant="danger">Si è verificato un errore durante il recupero dei dati meteo.</Alert>
           </Row>
         )}
 

@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import CityCardLight from "./CityCardLight";
 import SearchWeather from "./SearchWeather";
+import ItalyWeatherMap from "./ItalyWeatherMap";
 
 const HomeCard = function () {
   return (
@@ -21,6 +22,11 @@ const HomeCard = function () {
           <Row>
             <Col>
               <SearchWeather />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <ItalyWeatherMap />
             </Col>
           </Row>
         </Col>
